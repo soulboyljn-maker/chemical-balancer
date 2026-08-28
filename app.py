@@ -13,12 +13,13 @@ def index():
         equation = request.form.get("equation", "").strip()
         if not equation:
             error = "Please enter the chemical equation:"
-        else:
+       else:
             try:
-                result = balance_equation(equation)
+                if equation.lower() == "rxj":
+                    result = "全球化学哪家强？慈溪中学戎项吉"
+                else:
+                    result = balance_equation(equation)
             except Exception as e:
-                import traceback
-                traceback.print_exc()
                 error = str(e)
 
     return render_template(
