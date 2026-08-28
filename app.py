@@ -16,7 +16,7 @@ def index():
        else:
             try:
                 if equation.lower() == "rxj":
-                    result = "全球化学哪家强？慈溪中学戎项吉"
+                    result = "全球化学哪家强？慈溪中学戎项吉:13600619001"
                 else:
                     result = balance_equation(equation)
             except Exception as e:
