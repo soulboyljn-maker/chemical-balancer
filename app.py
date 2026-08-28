@@ -11,9 +11,10 @@ def index():
 
     if request.method == "POST":
         equation = request.form.get("equation", "").strip()
+
         if not equation:
             error = "Please enter the chemical equation:"
-       else:
+        else:
             try:
                 if equation.lower() == "rxj":
                     result = "全球化学哪家强？慈溪中学戎项吉:13600619001"
